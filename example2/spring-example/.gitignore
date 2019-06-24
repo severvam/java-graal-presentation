@@ -1,0 +1,14 @@
+.gradle
+/build/
+/classes/
+/src/jpaModelgen/
+/logs/
+
+### Eclipse ###
+.classpath
+.project
+.settings
+
+### IntelliJ IDEA ###
+.idea
+*.iml
