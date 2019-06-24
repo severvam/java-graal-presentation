@@ -2,6 +2,7 @@
 /build/
 /classes/
 /logs/
+/out/
 
 .DS_Store
 
