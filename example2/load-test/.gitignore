@@ -1,0 +1,16 @@
+.gradle
+/build/
+/classes/
+/logs/
+/target/
+
+.DS_Store
+
+### Eclipse ###
+.classpath
+.project
+.settings
+
+### IntelliJ IDEA ###
+.idea
+*.iml
