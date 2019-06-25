@@ -1,0 +1,26 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: ase
+      changes:
+        - createTable:
+            tableName: loan
+            columns:
+              - column:
+                  name: id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: amount
+                  type: decimal(9,5)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: loan_start_date
+                  type: timestamp
+              - column:
+                  name: loan_end_date
+                  type: timestamp

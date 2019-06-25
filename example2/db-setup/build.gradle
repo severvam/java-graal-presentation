@@ -1,0 +1,23 @@
+apply plugin: 'application'
+
+mainClassName = "com.fourfinanceit.db.migration.MigrationApp"
+
+apply plugin: 'java'
+sourceCompatibility = 12
+targetCompatibility = 12
+
+repositories {
+    // Use 'jcenter' for resolving your dependencies.
+    // You can declare any Maven/Ivy/file repository here.
+    jcenter()
+}
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile group: 'org.liquibase', name: 'liquibase-core', version: '3.6.1'
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.13'
+    compile group: 'com.dieselpoint', name: 'norm', version: '0.8.2'
+
+
+    testCompile 'junit:junit:4.12'
+}
