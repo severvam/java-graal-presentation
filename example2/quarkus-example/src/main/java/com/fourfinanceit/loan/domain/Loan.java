@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.util.Objects;
 
 @Entity
+@Table(name = "loan")
 public class Loan {
 
 	@Id
@@ -14,8 +15,10 @@ public class Loan {
 
 	private BigDecimal amount;
 
+	@Column(name = "loan_start_date")
 	private LocalDateTime loanStartDate;
 
+	@Column(name = "loan_end_date")
 	private LocalDateTime loanEndDate;
 
 	public Loan() {

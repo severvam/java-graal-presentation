@@ -7,6 +7,7 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -30,7 +31,7 @@ class LoansResource {
 	}
 
 	@RequestMapping("/last/{count}")
-	ResponseEntity<List<Loan>> myLoans(@PathParam("count") Integer count) {
+	ResponseEntity<List<Loan>> last(@PathVariable("count") Integer count) {
 		return ResponseEntity.ok(loanRepository.findAll(PageRequest.of(0, count, Sort.by(Sort.Direction.ASC, "id"))).getContent());
 	}
 

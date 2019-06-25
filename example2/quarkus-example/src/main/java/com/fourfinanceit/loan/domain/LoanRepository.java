@@ -16,7 +16,7 @@ public class LoanRepository {
 	}
 
 	public List<Loan> findLast(Integer count) {
-		return em.createQuery("select l from Loan l order by l.id asc limit " + count, Loan.class).getResultList();
+		return em.createQuery("select l from Loan l order by l.id asc", Loan.class).setMaxResults(count).getResultList();
 	}
 
 }
